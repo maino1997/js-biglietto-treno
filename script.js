@@ -36,6 +36,7 @@ if (age < 18 ){
     finalPrice = plainPrice;
 }
 
+console.log(finalPrice);
 
 // rendere presentabile il prezzo 
 finalPrice = finalPrice.toFixed(2);
