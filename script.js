@@ -42,5 +42,5 @@ finalPrice = finalPrice.toFixed(2);
 console.log(`Il prezzo scontato è ${finalPrice}`);
 
 // Iniettare in pagina il risultato 
-ticketDisplay.innerText = `Il prezzo scontato è ${finalPrice}`;
+ticketDisplay.innerText = `Il prezzo scontato è ${finalPrice} euro`;
 
