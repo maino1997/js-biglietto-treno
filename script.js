@@ -6,12 +6,26 @@
 // rendere presentabile il prezzo 
 
 
+let finalPrice;
+
 // Richiste all'utente 
 
-const distance = parseInt('Quanti km vuoi percorrere?' , '50'));
+const distance = parseInt( prompt('Quanti km vuoi percorrere?' , '50'));
 const age = parseInt(prompt('Quanti anni hai?' , '30'));
 
 // calcolare prezzo senza sconto 
 const plainPrice = distance * 0.21;
 console.log(plainPrice);
 
+// calcoli sconti 
+
+if (age < 18 ){
+    finalPrice = plainPrice - (plainPrice / 100 * 20);
+} else if(age > 65){
+    finalPrice = plainPrice - (plainPrice / 100 * 40);
+} else {
+    finalPrice = plainPrice;
+}
+
+
+console.log(finalPrice);
