@@ -15,7 +15,7 @@ const age = parseInt(prompt('Quanti anni hai?' , '30'));
 
 // calcolare prezzo senza sconto 
 const plainPrice = distance * 0.21;
-console.log(plainPrice);
+console.log(`Il prezzo intero è ${plainPrice.toFixed(2)}`);
 
 // calcoli sconti 
 
@@ -28,4 +28,10 @@ if (age < 18 ){
 }
 
 
-console.log(finalPrice);
+
+// rendere presentabile il prezzo 
+
+finalPrice = finalPrice.toFixed(2);
+
+console.log(`Il prezzo scontato è ${finalPrice}`);
+
