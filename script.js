@@ -6,14 +6,20 @@
 // rendere presentabile il prezzo 
 // Iniettare in pagina il risutato 
 
+
+// Preparazione e dichiarazione variabili 
 const ticketDisplay = document.getElementById('ticketPrice');
-console.log(ticketDisplay);
 let finalPrice;
 
 // Richiste all'utente 
+const distance = parseInt( prompt('Quanti km vuoi percorrere?' , '50').trim());
+const age = parseInt(prompt('Quanti anni hai?' , '30').trim());
 
-const distance = parseInt( prompt('Quanti km vuoi percorrere?' , '50'));
-const age = parseInt(prompt('Quanti anni hai?' , '30'));
+
+// Validazione Input numerici utente 
+if ( isNaN(distance) || isNaN(age) ){
+    alert('Valori inseriti non validi, reinserire!')
+}
 
 // calcolare prezzo senza sconto 
 const plainPrice = distance * 0.21;
@@ -37,3 +43,4 @@ console.log(`Il prezzo scontato è ${finalPrice}`);
 
 // Iniettare in pagina il risultato 
 ticketDisplay.innerText = `Il prezzo scontato è ${finalPrice}`;
+
