@@ -34,7 +34,9 @@ const plainPrice = (distance * 0.21).toFixed(2);
 console.log(`Il prezzo intero è ${plainPrice}`);
 
 
+// Dichiarazione plainPrice variabile 
 let finalPrice = plainPrice;
+
 
 // calcoli sconti 
 if (age < 18 ){
