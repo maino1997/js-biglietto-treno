@@ -4,8 +4,10 @@
 // calcolare prezzo con sconto minorenni 
 // poi con sconto senior 
 // rendere presentabile il prezzo 
+// Iniettare in pagina il risutato 
 
-
+const ticketDisplay = document.getElementById('ticketPrice');
+console.log(ticketDisplay);
 let finalPrice;
 
 // Richiste all'utente 
@@ -17,8 +19,9 @@ const age = parseInt(prompt('Quanti anni hai?' , '30'));
 const plainPrice = distance * 0.21;
 console.log(`Il prezzo intero è ${plainPrice.toFixed(2)}`);
 
-// calcoli sconti 
 
+
+// calcoli sconti 
 if (age < 18 ){
     finalPrice = plainPrice - (plainPrice / 100 * 20);
 } else if(age > 65){
@@ -28,10 +31,9 @@ if (age < 18 ){
 }
 
 
-
 // rendere presentabile il prezzo 
-
 finalPrice = finalPrice.toFixed(2);
-
 console.log(`Il prezzo scontato è ${finalPrice}`);
 
+// Iniettare in pagina il risultato 
+ticketDisplay.innerText = `Il prezzo scontato è ${finalPrice}`;
