@@ -19,7 +19,6 @@ const age = parseInt(prompt('Quanti anni hai?' , '30').trim());
 // Validazione Input numerici utente 
 if ( isNaN(distance) || isNaN(age) ){
     alert('Valori inseriti non validi, reinserire!')
-    ticketDisplay.innerText = '';
 }
 
 // calcolare prezzo senza sconto 
