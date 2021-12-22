@@ -30,8 +30,7 @@ else{
 
 
 // calcolare prezzo senza sconto 
-let price = (distance * 0.21).toFixed(2);
-console.log(`Il prezzo intero è ${price}`);
+let price = (distance * 0.21);
 
 
 // calcoli sconti 
