@@ -30,32 +30,26 @@ else{
 
 
 // calcolare prezzo senza sconto 
-const plainPrice = (distance * 0.21).toFixed(2);
-console.log(`Il prezzo intero è ${plainPrice}`);
-
-
-// Dichiarazione plainPrice variabile 
-let finalPrice = plainPrice;
+let price = (distance * 0.21).toFixed(2);
+console.log(`Il prezzo intero è ${price}`);
 
 
 // calcoli sconti 
 if (age < 18 ){
-    finalPrice = plainPrice - (plainPrice / 100 * 20);
+    price -= (price / 100 * 20);
 } else if(age > 65){
-    finalPrice = plainPrice - (plainPrice / 100 * 40);
+    price -= (price / 100 * 40);
 } 
-
-console.log(finalPrice);
 
 
 
 // rendere presentabile il prezzo 
-finalPrice = finalPrice.toFixed(2);
-console.log(`Il prezzo scontato è ${finalPrice}`);
+price = price.toFixed(2);
+console.log(`Il prezzo scontato è ${price}`);
 
 
 
 // Iniettare in pagina il risultato 
-ticketDisplay.innerText = `Il prezzo scontato è ${finalPrice} euro`;
+ticketDisplay.innerText = `Il prezzo scontato è ${price} euro`;
 
 }
